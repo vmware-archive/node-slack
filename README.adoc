@@ -35,7 +35,7 @@ echo http://$NODE_IP:$NODE_PORT
 ```
 You should see something like:
 ```
-http://192.168.99.100:32595
+https://192.168.99.100:32595
 ```
 
 In a separate terminal, start ngrok (substituting your actual URL):
@@ -46,7 +46,7 @@ ngrok http 192.168.99.100:32595
 You should see some output including something like:
 
 ```
-Forwarding                    http://a61d8bb0.ngrok.io -> 192.168.99.100:32595
+Forwarding                    https://a61d8bb0.ngrok.io -> 192.168.99.100:32595
 ```
 
 === Build the Docker container for the function code
@@ -119,7 +119,7 @@ NAME                     TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S
 riff-http-gateway        LoadBalancer   10.51.247.194   104.154.118.171   80:30725/TCP   22m
 ```
 
-We can see from the `EXTERNAL-IP` and `PORT(S)` columns that our gateway is on `http://104.154.118.171:80`
+We can see from the `EXTERNAL-IP` and `PORT(S)` columns that our gateway is on `https://104.154.118.171:80`
 in this case.
 
 Another convenient way to get the URL is:
